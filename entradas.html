@@ -11,13 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=New+Rocker&family=Staatliches&display=swap"
       rel="stylesheet"
     />
+    <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/c3fd22b8e3.js"
       crossorigin="anonymous"
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-
   <body>
     <header>
       <nav>
@@ -34,5 +34,53 @@
         </ul>
       </nav>
     </header>
+    <section class="Formulario comprar entradas">
+      <h2>Comprar entradas</h2>
+      <form onsubmit="return comprar();">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Escribir nombre" required />
+        <label for="correo">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correo"
+          placeholder="Escribir correo"
+          required
+        />
+        <label for="exposicion">Exposición:</label>
+        <!-- Se llama a la función costeTotal() cuando hay cambios en la exposición seleccionada -->
+        <select id="exposicion" onchange="costeTotal()">
+          <option value="e1">Exposición Adultos - 10 €</option>
+          <option value="e2">Exposición Jovenes - 8 €</option>
+          <option value="e3">Exposición Carnet Joven - 5 €</option>
+          <option value="e4">Exposición Niños - 0 €</option>
+        </select>
+        <label for="numero">Número de entradas:</label>
+        <!-- Se llama a la función costeTotal() cuando hay cambios en el número de entradas -->
+        <input
+          type="number"
+          id="numero"
+          min="1"
+          max="10"
+          placeholder="Número de entradas"
+          required
+          onchange="costeTotal()"
+        />
+        <p>Total a pagar: <span id="coste"></span></p>
+        <input type="submit" value="Comprar entradas" />
+      </form>
+    </section>
+    <div id="modal">
+      <div>
+        <h2>La compra se ha realizado correctamente</h2>
+        <ul>
+          <li>Nombre: <span id="nom"></span></li>
+          <li>Correo electrónico: <span id="corr"></span></li>
+          <li>Exposición: <span id="ex"></span></li>
+          <li>Número de entradas: <span id="num"></span></li>
+          <li>Coste total: <span id="ct"></span></li>
+        </ul>
+        <button onclick="cerrarVentana()">Aceptar</button>
+      </div>
+    </div>
   </body>
 </html>
