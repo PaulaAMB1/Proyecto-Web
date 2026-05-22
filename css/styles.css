@@ -1,18 +1,30 @@
+:root {
+  --rojo-saul: #da291c;
+  --negro-puro: #000000;
+  --blanco-puro: #ffffff;
+  --gris-texto: #444444;
+  --gris-fondo: #f4f4f4;
+  --alto-menu: 78px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Elms Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: var(--blanco-puro);
+  color: var(--negro-puro);
 }
+
 h1 {
   font-family: "Staatliches", sans-serif;
   font-size: 55px;
@@ -20,17 +32,20 @@ h1 {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
 h2 {
   font-size: 32px;
   font-weight: 900;
   letter-spacing: -0.5px;
 }
+
 h3 {
   font-size: 18px;
   font-weight: 700;
 }
+
 header {
-  background-color: #000000;
+  background-color: var(--negro-puro);
   padding: 20px 50px;
   position: fixed;
   width: 100%;
@@ -38,6 +53,7 @@ header {
   left: 0;
   z-index: 1000;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -45,14 +61,25 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+nav .logo h1 {
+  color: var(--blanco-puro);
+  font-family: "New Rocker", sans-serif;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 nav ul {
   display: flex;
   gap: 35px;
   list-style: none;
   align-items: center;
 }
-nav a {
-  color: #ffffff;
+
+nav ul li a {
+  color: var(--blanco-puro);
   text-decoration: none;
   font-family: "Staatliches", sans-serif;
   font-size: 18px;
@@ -60,22 +87,25 @@ nav a {
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
-nav a:hover {
-  color: #da291c;
+
+nav ul li a:hover {
+  color: var(--rojo-saul);
 }
-.logo h1 {
-  color: #ffffff;
-  font-family: "New Rocker", sans-serif;
-  font-size: 28px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin: 0;
+
+nav ul li:first-child {
+  display: none;
+  color: var(--blanco-puro) !important;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+  font-family: Arial, sans-serif;
 }
+
 .Saul {
   height: 100vh;
   background:
     linear-gradient(to bottom, rgba(185, 14, 1, 0.7), rgba(94, 13, 13, 0.9)),
-    url(/imágenes/09-saul-bass-imagenes-brandemia-blog.jpg);
+    url(../imágenes/09-saul-bass-imagenes-brandemia-blog.jpg);
   background-size: 140%;
   background-position: 1% 1%;
   background-attachment: fixed;
@@ -85,14 +115,16 @@ nav a:hover {
   align-items: center;
   padding: 0 10%;
 }
+
 .Saul h1 {
   font-family: "Staatliches", sans-serif;
-  color: #ffffff;
+  color: var(--blanco-puro) !important;
   font-size: 70px;
   line-height: 1.1;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
 .Introducción-Saul {
   max-width: 1100px;
   margin: 100px auto;
@@ -102,41 +134,51 @@ nav a:hover {
   gap: 60px;
   align-items: center;
 }
+
 .Introducción-Saul h2 {
   font-size: 38px;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 20px;
-  border-left: 6px solid #da291c;
+  border-left: 6px solid var(--rojo-saul);
   padding-left: 15px;
 }
+
 .Introducción-Saul p {
-  color: #444444;
+  color: var(--gris-texto);
 }
+
+.Introducción-Saul figure {
+  overflow: hidden;
+}
+
 .Introducción-Saul figure img {
   width: 100%;
   height: auto;
   filter: grayscale(100%);
-  border: 10px solid #000000;
+  border: 10px solid var(--negro-puro);
 }
+
 .EntradasBoton {
   grid-column: span 2;
-  background-color: #f4f4f4;
+  background-color: var(--gris-fondo);
   padding: 40px;
   margin-top: 40px;
-  border-top: 4px solid #000000;
+  border-top: 4px solid var(--negro-puro);
 }
+
 .EntradasBoton p {
   font-style: italic;
   font-size: 18px;
-  color: #000000;
+  color: var(--negro-puro);
   margin-bottom: 25px;
   max-width: 90%;
 }
+
 .botón-comprar-entradas {
   display: inline-block;
-  background-color: #da291c;
-  color: #ffffff;
+  background-color: var(--rojo-saul);
+  color: var(--blanco-puro);
   text-decoration: none;
   font-family: "Staatliches", sans-serif;
   font-size: 20px;
@@ -147,78 +189,66 @@ nav a:hover {
     transform 0.2s ease,
     background-color 0.2s ease;
 }
+
 .botón-comprar-entradas:hover {
-  background-color: #000000;
+  background-color: var(--negro-puro);
   transform: scale(1.05);
 }
+
 .Ubicación {
   max-width: 1100px;
   margin: 100px auto;
   padding: 0 20px;
 }
+
 .Ubicación h2 {
   font-size: 38px;
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
+
 .ubicación-información {
   display: flex;
   flex-direction: row-reverse;
   gap: 50px;
   align-items: center;
 }
+
 .ubicación-información .mapa {
   flex: 1;
 }
+
 .ubicación-información .mapa iframe {
   width: 100%;
   height: 350px;
-  border: 4px solid #000000 !important;
+  border: 4px solid var(--negro-puro) !important;
 }
-.ubicación-información > div:not(.mapa) {
+
+.ubicación-información div:not(.mapa) {
   flex: 1;
 }
-.ubicación-información h3 {
+
+.ubicación-información div:not(.mapa) h3 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
 }
-.ubicación-información ul {
+
+.ubicación-información div:not(.mapa) ul {
   list-style: none;
   margin-top: 20px;
 }
-.ubicación-información li {
+
+.ubicación-información div:not(.mapa) ul li {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-.ubicación-información li i {
+
+.ubicación-información div:not(.mapa) ul li i {
   font-size: 24px;
-  color: #da291c;
-}
-footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 40px 20px;
-  margin-top: 100px;
-}
-.Contacto {
-  margin-bottom: 20px;
-}
-.Contacto a {
-  color: #ffffff;
-  font-size: 22px;
-  margin: 0 15px;
-  transition: color 0.3s ease;
-}
-.Contacto a:hover {
-  color: #da291c;
-}
-footer p {
-  font-size: 13px;
-  opacity: 0.7;
+  color: var(--rojo-saul);
 }
 
 .Galería > div {
@@ -229,33 +259,37 @@ footer p {
   margin: 140px auto 60px auto;
   padding: 0 20px;
 }
-.Galería h2 {
+
+.Galería > div h2 {
   grid-column: span 3;
   font-family: "Staatliches", sans-serif;
   font-size: 38px;
   text-transform: uppercase;
   margin-top: 50px;
   margin-bottom: 25px;
-  border-left: 6px solid #da291c;
+  border-left: 6px solid var(--rojo-saul);
   padding-left: 15px;
-  color: #000000;
+  color: var(--negro-puro);
 }
-.Galería h2:first-of-type {
+
+.Galería > div h2:first-of-type {
   margin-top: 0;
 }
-.Galería figure {
+
+.Galería > div figure {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   height: 420px;
-  background-color: #ffffff;
+  background-color: var(--blanco-puro);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.Galería figure img {
+
+.Galería > div figure img {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
@@ -264,14 +298,19 @@ footer p {
   display: block;
   transition: transform 0.4s ease;
 }
-.Galería figcaption {
+
+.Galería > div figure:hover img {
+  transform: scale(1.05);
+}
+
+.Galería > div figure figcaption {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
-  color: #ffffff;
+  color: var(--blanco-puro);
   padding: 25px;
   text-align: center;
   display: flex;
@@ -281,45 +320,111 @@ footer p {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.Galería figcaption h3 {
+
+.Galería > div figure figcaption h3 {
   font-family: "Staatliches", sans-serif;
   font-size: 24px;
   letter-spacing: 1px;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: var(--blanco-puro);
 }
-.Galería figcaption p {
+
+.Galería > div figure figcaption p {
   font-family: "Elms Sans", sans-serif;
   font-size: 15px;
   opacity: 0.8;
 }
-.Galería figure:hover figcaption {
+
+.Galería > div figure:hover figcaption {
   opacity: 1;
 }
-.Galería figure:hover img {
-  transform: scale(1.05);
-}
+
 .Entradas {
   display: flex;
   width: 100%;
-  min-height: calc(100vh - 78px);
-  margin-top: 78px;
+  min-height: calc(100vh - var(--alto-menu));
+  margin-top: var(--alto-menu);
 }
+
 .ParteDerechaFormulario {
-  flex: 1;
-  padding: 3rem 10%;
+  flex: 1.5;
+  padding: 3rem 5%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: var(--blanco-puro);
 }
+
+.ParteDerechaFormulario h2 {
+  font-family: "Staatliches", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.ParteDerechaFormulario form {
+  width: 100%;
+  max-width: 850px;
+}
+
+.ParteDerechaFormulario form label {
+  display: none;
+}
+
+.ParteDerechaFormulario form input,
+.ParteDerechaFormulario form select,
+.ParteDerechaFormulario form p {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.8rem;
+  font-family: "Elms Sans", sans-serif;
+  font-size: 1rem;
+  border: 2px solid var(--negro-puro);
+}
+
+.ParteDerechaFormulario form p {
+  border: none;
+  font-weight: bold;
+  padding-left: 0;
+}
+
+.ParteDerechaFormulario form input[type="submit"] {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 12rem;
+  padding: 0.6rem;
+  background-color: var(--blanco-puro);
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: var(--rojo-saul) 2px solid;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--negro-puro);
+}
+
+.ParteDerechaFormulario form input[type="submit"]:hover {
+  background-color: var(--rojo-saul);
+  color: var(--blanco-puro);
+}
+
+#coste {
+  color: var(--rojo-saul);
+  font-size: 1.3rem;
+}
+
 .FotoSaulDerecha {
   flex: 1;
-  height: calc(100vh - 78px);
-  background-color: #000000;
+  height: calc(100vh - var(--alto-menu));
+  background-color: var(--negro-puro);
   overflow: hidden;
 }
+
 .FotoSaulDerecha img {
   width: 100%;
   height: 100%;
@@ -327,74 +432,41 @@ footer p {
   object-position: center top;
   opacity: 0.85;
 }
-.ParteDerechaFormulario h2 {
-  font-family: "Staatliches", sans-serif;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
+
+.Boton-Ubicación {
+  width: 100%;
+  max-width: 850px;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px dashed var(--negro-puro);
   text-align: left;
 }
 
-.ParteDerechaFormulario form {
-  width: 100%;
+.Boton-Ubicación p {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
 }
-.ParteDerechaFormulario form label {
-  display: none;
-}
-.ParteDerechaFormulario form input,
-.ParteDerechaFormulario form select,
-.ParteDerechaFormulario form p {
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.7rem;
-  font-family: "Elms Sans", sans-serif;
-  font-size: 1rem;
-  border: 2px solid #000000;
-}
-.ParteDerechaFormulario form p {
-  border: none;
-  font-weight: bold;
-  padding-left: 0;
-}
-#coste {
-  color: #da291c;
-  font-size: 1.3rem;
-}
-.ParteDerechaFormulario form input[type="submit"],
-.Boton-Ubicación a,
-#modal > div > button {
+
+.Boton-Ubicación a {
   display: inline-block;
   text-decoration: none;
   text-align: center;
   width: 12rem;
   padding: 0.6rem;
-  background-color: white;
+  background-color: var(--blanco-puro);
   font-family: "Staatliches", sans-serif;
   font-size: 1.1rem;
   text-transform: uppercase;
   border-radius: 10px;
-  border: #da291c 2px solid;
+  border: var(--rojo-saul) 2px solid;
   transition: 0.5s;
   cursor: pointer;
-  color: #000000;
+  color: var(--negro-puro);
 }
-.ParteDerechaFormulario form input[type="submit"]:hover,
-.Boton-Ubicación a:hover,
-#modal > div > button:hover {
-  background-color: #da291c;
-  color: white;
-}
-.Boton-Ubicación {
-  width: 100%;
-  max-width: 500px;
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 2px dashed #000000;
-  text-align: left;
-}
-.Boton-Ubicación p {
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
+
+.Boton-Ubicación a:hover {
+  background-color: var(--rojo-saul);
+  color: var(--blanco-puro);
 }
 #modal {
   position: fixed;
@@ -403,31 +475,85 @@ footer p {
   display: none;
   padding: 2rem;
   z-index: 2000;
-  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 #modal > div {
-  background-color: white;
+  background-color: var(--blanco-puro);
   padding: 2rem;
   max-width: 500px;
   width: 90%;
-  border: 3px solid #000000;
+  border: 3px solid var(--negro-puro);
 }
-#modal > div > h2,
-#modal > div > ul > li,
-#modal > div > button {
+
+#modal > div h2,
+#modal > div ul li,
+#modal > div button {
   margin: 0.5rem 0;
 }
-#modal ul {
+
+#modal > div ul {
   list-style: none;
   padding: 0;
 }
-#modal li span {
+
+#modal > div ul li span {
   font-weight: bold;
 }
 
+#modal > div button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 12rem;
+  padding: 0.6rem;
+  background-color: var(--blanco-puro);
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: var(--rojo-saul) 2px solid;
+  transition: 0.5s;
+  cursor: pointer;
+  color: var(--negro-puro);
+}
+
+#modal > div button:hover {
+  background-color: var(--rojo-saul);
+  color: var(--blanco-puro);
+}
+
+footer {
+  background-color: var(--negro-puro);
+  color: var(--blanco-puro);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 100px;
+}
+
+footer .Contacto {
+  margin-bottom: 20px;
+}
+
+footer .Contacto a {
+  color: var(--blanco-puro);
+  font-size: 22px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+
+footer .Contacto a:hover {
+  color: var(--rojo-saul);
+}
+
+footer p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* Responsive */
 @media screen and (max-width: 1100px) {
   h2,
   .Introducción-Saul h2,
@@ -450,25 +576,23 @@ footer p {
   .Galería > div {
     grid-template-columns: repeat(2, 1fr);
   }
-  .Galería h2 {
+  .Galería > div h2 {
     grid-column: span 2;
   }
 }
+
 @media screen and (max-width: 850px) {
-  .contenedor-entradas {
+  .Entradas {
     flex-direction: column;
   }
   .FotoSaulDerecha {
     height: 300px;
   }
 }
+
 @media screen and (max-width: 800px) {
   .Saul h1 {
     font-size: 3.5rem;
-  }
-  .Entradas {
-    flex-direction: column;
-    min-height: auto;
   }
   .ParteDerechaFormulario {
     width: 100%;
@@ -479,6 +603,7 @@ footer p {
     height: 350px;
   }
 }
+
 @media screen and (max-width: 500px) {
   body,
   p,
@@ -512,35 +637,36 @@ footer p {
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  .Galería h2 {
+  .Galería > div h2 {
     grid-column: span 1;
     font-size: 1.5rem;
   }
-  .Galería figure {
+  .Galería > div figure {
     height: 320px;
   }
-  #modal > div > h2 {
+  #modal > div h2 {
     font-size: 1.2rem;
   }
-  #modal > div > ul > li {
+  #modal > div ul li {
     font-size: 0.8rem;
   }
 }
+
 @media screen and (max-width: 450px) {
-  nav ul > li:first-child {
+  nav {
+    align-items: center;
+  }
+  nav ul li:first-child {
     display: block;
   }
-  nav ul > li:not(:first-child) {
+  nav ul li:not(:first-child) {
     display: none;
   }
-  nav ul:hover > li:not(:first-child) {
+  nav ul:hover li:not(:first-child) {
     display: block;
     text-align: center;
     width: 100%;
     padding: 5px 0;
-  }
-  nav {
-    align-items: center;
   }
   .logo h1 {
     font-size: 24px;
