@@ -1,0 +1,548 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #000000;
+}
+h1 {
+  font-family: "Staatliches", sans-serif;
+  font-size: 55px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+header {
+  background-color: #000000;
+  padding: 20px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  align-items: center;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Staatliches", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #da291c;
+}
+.logo h1 {
+  color: #ffffff;
+  font-family: "New Rocker", sans-serif;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.Saul {
+  height: 100vh;
+  background:
+    linear-gradient(to bottom, rgba(185, 14, 1, 0.7), rgba(94, 13, 13, 0.9)),
+    url(/imágenes/09-saul-bass-imagenes-brandemia-blog.jpg);
+  background-size: 140%;
+  background-position: 1% 1%;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+.Saul h1 {
+  font-family: "Staatliches", sans-serif;
+  color: #ffffff;
+  font-size: 70px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.Introducción-Saul {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.Introducción-Saul h2 {
+  font-size: 38px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-left: 6px solid #da291c;
+  padding-left: 15px;
+}
+.Introducción-Saul p {
+  color: #444444;
+}
+.Introducción-Saul figure img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+  border: 10px solid #000000;
+}
+.EntradasBoton {
+  grid-column: span 2;
+  background-color: #f4f4f4;
+  padding: 40px;
+  margin-top: 40px;
+  border-top: 4px solid #000000;
+}
+.EntradasBoton p {
+  font-style: italic;
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 25px;
+  max-width: 90%;
+}
+.botón-comprar-entradas {
+  display: inline-block;
+  background-color: #da291c;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Staatliches", sans-serif;
+  font-size: 20px;
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+.botón-comprar-entradas:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+.Ubicación {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 20px;
+}
+.Ubicación h2 {
+  font-size: 38px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+.ubicación-información {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 50px;
+  align-items: center;
+}
+.ubicación-información .mapa {
+  flex: 1;
+}
+.ubicación-información .mapa iframe {
+  width: 100%;
+  height: 350px;
+  border: 4px solid #000000 !important;
+}
+.ubicación-información > div:not(.mapa) {
+  flex: 1;
+}
+.ubicación-información h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.ubicación-información ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.ubicación-información li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.ubicación-información li i {
+  font-size: 24px;
+  color: #da291c;
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 100px;
+}
+.Contacto {
+  margin-bottom: 20px;
+}
+.Contacto a {
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0 15px;
+  transition: color 0.3s ease;
+}
+.Contacto a:hover {
+  color: #da291c;
+}
+footer p {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.Galería > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  max-width: 1200px;
+  margin: 140px auto 60px auto;
+  padding: 0 20px;
+}
+.Galería h2 {
+  grid-column: span 3;
+  font-family: "Staatliches", sans-serif;
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  border-left: 6px solid #da291c;
+  padding-left: 15px;
+  color: #000000;
+}
+.Galería h2:first-of-type {
+  margin-top: 0;
+}
+.Galería figure {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 420px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Galería figure img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.Galería figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.Galería figcaption h3 {
+  font-family: "Staatliches", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+.Galería figcaption p {
+  font-family: "Elms Sans", sans-serif;
+  font-size: 15px;
+  opacity: 0.8;
+}
+.Galería figure:hover figcaption {
+  opacity: 1;
+}
+.Galería figure:hover img {
+  transform: scale(1.05);
+}
+.Entradas {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 78px);
+  margin-top: 78px;
+}
+.ParteDerechaFormulario {
+  flex: 1;
+  padding: 3rem 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #ffffff;
+}
+.FotoSaulDerecha {
+  flex: 1;
+  height: calc(100vh - 78px);
+  background-color: #000000;
+  overflow: hidden;
+}
+.FotoSaulDerecha img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.85;
+}
+.ParteDerechaFormulario h2 {
+  font-family: "Staatliches", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.ParteDerechaFormulario form {
+  width: 100%;
+}
+.ParteDerechaFormulario form label {
+  display: none;
+}
+.ParteDerechaFormulario form input,
+.ParteDerechaFormulario form select,
+.ParteDerechaFormulario form p {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  font-family: "Elms Sans", sans-serif;
+  font-size: 1rem;
+  border: 2px solid #000000;
+}
+.ParteDerechaFormulario form p {
+  border: none;
+  font-weight: bold;
+  padding-left: 0;
+}
+#coste {
+  color: #da291c;
+  font-size: 1.3rem;
+}
+.ParteDerechaFormulario form input[type="submit"],
+.Boton-Ubicación a,
+#modal > div > button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 12rem;
+  padding: 0.6rem;
+  background-color: white;
+  font-family: "Staatliches", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  border: #da291c 2px solid;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #000000;
+}
+.ParteDerechaFormulario form input[type="submit"]:hover,
+.Boton-Ubicación a:hover,
+#modal > div > button:hover {
+  background-color: #da291c;
+  color: white;
+}
+.Boton-Ubicación {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #000000;
+  text-align: left;
+}
+.Boton-Ubicación p {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+#modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+  padding: 2rem;
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#modal > div {
+  background-color: white;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  border: 3px solid #000000;
+}
+#modal > div > h2,
+#modal > div > ul > li,
+#modal > div > button {
+  margin: 0.5rem 0;
+}
+#modal ul {
+  list-style: none;
+  padding: 0;
+}
+#modal li span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1100px) {
+  h2,
+  .Introducción-Saul h2,
+  .Ubicación h2,
+  .Galería h2,
+  .ParteDerechaFormulario h2 {
+    font-size: 2rem;
+  }
+  .Introducción-Saul {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .EntradasBoton {
+    grid-column: span 1;
+  }
+  .ubicación-información {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .Galería > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Galería h2 {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contenedor-entradas {
+    flex-direction: column;
+  }
+  .FotoSaulDerecha {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .Saul h1 {
+    font-size: 3.5rem;
+  }
+  .Entradas {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .ParteDerechaFormulario {
+    width: 100%;
+    padding: 3rem 5%;
+  }
+  .FotoSaulDerecha {
+    width: 100%;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body,
+  p,
+  .EntradasBoton p,
+  .Galería figcaption p {
+    font-size: 0.95rem;
+  }
+  .Saul h1 {
+    font-size: 2.2rem;
+  }
+  .ParteDerechaFormulario h2 {
+    font-size: 1.6rem;
+  }
+  header {
+    position: static;
+    padding: 15px 20px;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .Entradas,
+  .Galería > div {
+    margin-top: 20px;
+  }
+  .Galería > div {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .Galería h2 {
+    grid-column: span 1;
+    font-size: 1.5rem;
+  }
+  .Galería figure {
+    height: 320px;
+  }
+  #modal > div > h2 {
+    font-size: 1.2rem;
+  }
+  #modal > div > ul > li {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  nav ul > li:first-child {
+    display: block;
+  }
+  nav ul > li:not(:first-child) {
+    display: none;
+  }
+  nav ul:hover > li:not(:first-child) {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+  nav {
+    align-items: center;
+  }
+  .logo h1 {
+    font-size: 24px;
+  }
+}
